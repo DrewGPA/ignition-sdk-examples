@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "properties": {
+      "events": {
+          "type": "array",
+          "description": "Data string of current drawing",
+          "default": []
+      },
+  "defaultView": {
+          "type": "string",
+          "description": "The default view when first rendering the Calendar",
+          "default": "dayGridMonth"
+      },
+  "firstDay": {
+          "type": "integer",
+          "description": "The first day of the week (0=sun, 1=mon, etc)",
+          "default": 1
+      },
+  "minTime": {
+          "type": "string",
+          "description": "Inclusive minimum time at which the week and day views will start",
+          "default": "00:00:00"
+      },
+  "maxTime": {
+          "type": "string",
+          "description": "Exclusive maximum time at which the week and day views will end",
+          "default": "00:00:00"
+      },
+  "slotDuration": {
+          "type": "string",
+          "description": "Duration of the slots in week and day views",
+          "default": "00:15:00"
+      },
+  "weekNumbers": {
+          "type": "boolean",
+          "description": "Show weekNumbers",
+          "default": false
+      },
+  "weekNumbersWithinDays": {
+          "type": "boolean",
+          "description": "if weekNumbers are shown, show them within the days.",
+          "default": false
+      },
+  "nowIndicator": {
+          "type": "boolean",
+          "description": "current time indicator for week and day views",
+          "default": false
+      },
+
+      "style": {
+          "$ref": "urn:ignition-schema:schemas/style-properties.schema.json",
+          "default": {
+              "classes": ""
+          }
+      }
+  }
+}

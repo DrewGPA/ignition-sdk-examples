@@ -5,10 +5,7 @@
     "arrow-return-shorthand": true,
     "await-promise": true,
     "class-name": true,
-    "comment-format": [
-      true,
-      "check-space"
-    ],
+    "comment-format": [true, "check-space"],
     "curly": [true, "ignore-same-line"],
     "encoding": true,
     "eofline": true,
@@ -19,6 +16,7 @@
     "jsdoc-format": true,
     "jsx-curly-spacing": false,
     "jsx-wrap-multiline": false,
+    "jsx-no-multiline-js": false,
     "new-parens": true,
     "no-angle-bracket-type-assertion": true,
     "no-default-export": true,
@@ -46,10 +44,7 @@
         "variable-declaration": "nospace"
       }
     ],
-    "variable-name": [
-      true,
-      "ban-keywords"
-    ],
+    "variable-name": [true, "ban-keywords"],
     "whitespace": [
       true,
       "check-branch",

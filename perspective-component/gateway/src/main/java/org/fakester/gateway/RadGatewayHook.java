@@ -12,6 +12,9 @@ import com.inductiveautomation.perspective.gateway.api.ComponentModelDelegateReg
 import com.inductiveautomation.perspective.gateway.api.PerspectiveContext;
 import org.fakester.common.RadComponents;
 import org.fakester.common.component.display.Image;
+import org.fakester.common.component.display.Table;
+import org.fakester.common.component.display.ATCalendar;
+
 import org.fakester.common.component.display.Messenger;
 import org.fakester.common.component.display.TagCounter;
 import org.fakester.gateway.delegate.MessageComponentModelDelegate;
@@ -44,6 +47,9 @@ public class RadGatewayHook extends AbstractGatewayModuleHook {
         if (this.componentRegistry != null) {
             log.info("Registering Rad components.");
             this.componentRegistry.registerComponent(Image.DESCRIPTOR);
+            this.componentRegistry.registerComponent(ATCalendar.DESCRIPTOR);
+            this.componentRegistry.registerComponent(Table.DESCRIPTOR);
+
             this.componentRegistry.registerComponent(TagCounter.DESCRIPTOR);
             this.componentRegistry.registerComponent(Messenger.DESCRIPTOR);
         } else {
@@ -64,6 +70,9 @@ public class RadGatewayHook extends AbstractGatewayModuleHook {
         log.info("Shutting down RadComponent module and removing registered components.");
         if (this.componentRegistry != null) {
             this.componentRegistry.removeComponent(Image.COMPONENT_ID);
+            this.componentRegistry.removeComponent(Table.COMPONENT_ID);
+            this.componentRegistry.removeComponent(ATCalendar.COMPONENT_ID);
+
             this.componentRegistry.removeComponent(TagCounter.COMPONENT_ID);
             this.componentRegistry.removeComponent(Messenger.COMPONENT_ID);
         } else {
